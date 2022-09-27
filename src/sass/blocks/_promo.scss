@@ -1,0 +1,35 @@
+@import "../base/mixins";
+.promo{
+  min-height: 100vh;
+  position: relative;
+  background: url("../img/main_bg.jpg") center (50%/cover) no-repeat;
+  color: white;
+  padding-top: 450px;
+  &__subtitle{
+    position: relative;
+    z-index: 2;
+    padding-left: 10px;
+    @include before-circle
+  }
+  &__title{
+    max-width: 535px;
+  }
+  &__header{
+    padding-left: 480px;
+  }
+  &__btns{
+    margin-top: 30px;
+    max-width: 400px;
+    padding: 0 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  &__link{
+    color: white;
+    font-weight: bold;
+    &:hover{
+      color: white;
+    }
+  }
+}

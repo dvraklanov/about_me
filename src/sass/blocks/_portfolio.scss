@@ -1,0 +1,43 @@
+@import "../base/mixins";
+
+.portfolio{
+  padding-top: 120px;
+  &__title{
+    position: relative;
+    @include before-circle;
+    &:before{
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  &__subtitle{
+    margin-top: 6px;
+    margin-bottom: 26px;
+  }
+  &__wrapper{
+    padding-top: 60px;
+    display: grid;
+    gap: 5px;
+    grid-template-areas:
+    "uber pulse bread plans"
+    "ipad mac mac plans";
+  }
+  #bread{
+    grid-area: bread
+  }
+  #ipad{
+    grid-area: ipad;
+  }
+  #plans{
+    grid-area: plans;
+  }
+  #pulse{
+    grid-area: pulse;
+  }
+  #uber{
+    grid-area: uber;
+  }
+  #mac{
+    grid-area: mac;
+  }
+}

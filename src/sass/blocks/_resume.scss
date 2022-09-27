@@ -1,0 +1,82 @@
+@import "../base/mixins";
+
+.resume{
+  padding-top: 120px;
+  &__title{
+    position: relative;
+    @include before-circle;
+    &:before{
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  &__subtitle{
+    margin-top: 6px;
+    margin-bottom: 26px;
+  }
+  &__wrapper{
+    padding: 60px 65px 0 65px;
+    display: grid;
+    column-gap: 136px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &__column{
+    &-title{
+      padding-left: 43px;
+      position: relative;
+      @include before-circle;
+      &:before{
+        top: 50%;
+        transform: translateY(-50%);
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+  &__item{
+    position: relative;
+    &:before{
+      position: absolute;
+      content: '';
+      height: 1px;
+      width: 36px;
+      background-color: black;
+      top: 75px;
+      left: 7px;
+    }
+    &-head{
+      position: relative;
+      padding-top: 53px;
+      padding-left: 56px;
+    }
+    &-icon{
+      position: absolute;
+      left: 20px;
+      top: 67px;
+      @include before-circle;
+      &:before{
+        top: -10px;
+        left: -20px;
+      }
+    }
+    &-body{
+      padding-top: 12px;
+    }
+  }
+  ul{
+    list-style-type: none;
+    li{
+      position: relative;
+      padding-left: 43px;
+      &:after{
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        top: -8px;
+        left: 7px;
+        background-color: black;
+      }
+    }
+  }
+}
